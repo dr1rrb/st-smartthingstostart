@@ -1,0 +1,46 @@
+﻿<Page
+    x:Class="SmartThingsToStart.SmartThingsSetup"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:SmartThingsToStart"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    d:DesignHeight="300"
+    d:DesignWidth="400">
+
+	<ScrollViewer VerticalAlignment="Center">
+		<StackPanel MaxWidth="768" Padding="10">
+			<TextBlock Margin="0,0,0,10" FontSize="50" FontWeight="ExtraLight">
+				Welcome
+			</TextBlock>
+			
+			<TextBlock TextWrapping="WrapWholeWords" Margin="0,0,0,10">
+				In order to get this application to works, you must setup a SmartApp on your SmartThings hub.
+			</TextBlock>
+			
+			<TextBlock TextWrapping="WrapWholeWords" LineHeight="25" Margin="0,0,0,10">
+				1. Login to <Hyperlink NavigateUri="https://graph.api.smartthings.com/">SmartThings IDE</Hyperlink><LineBreak />
+				2. Select <Run FontWeight="Bold">My Locations</Run> and choose the location you want to setup<LineBreak />
+				3. Re-Login (yeah !)<LineBreak />
+				4. In page header, select <Run FontWeight="Bold">My SmartApps</Run> and then click <Run FontWeight="Bold">+ New SmartApp</Run><LineBreak />
+				5. Select tab <Run FontWeight="Bold">From code</Run><LineBreak />
+				6. Download the application code <Hyperlink NavigateUri="http://smartthingstostartproxy.azurewebsites.net/SmartThings/SmartThingsToStart.groovy.txt">here</Hyperlink> and copy-paste it<LineBreak />
+				7. Click on button <Run FontWeight="Bold">Create</Run><LineBreak />
+				8. In top right corner, click button <Run FontWeight="Bold">App Settings</Run><LineBreak />
+				9. Expend the <Run FontWeight="Bold">OAuth</Run> section, and check <Run FontWeight="Bold">Enable OAuth in Smart App</Run><LineBreak />
+				10. Copy and paste <Run FontStyle="Italic">Client ID</Run> and <Run FontStyle="Italic">Client Secret</Run> in fields bellow<LineBreak />
+				11. Click on button <Run FontWeight="Bold">Update</Run><LineBreak />
+				12. Finally, in top right corner click button <Run FontWeight="Bold">Code</Run>, then select <Run FontWeight="Bold">Publish</Run> / <Run FontWeight="Bold">For Me</Run>
+			</TextBlock>
+			
+			<TextBlock>Client ID</TextBlock>
+			<TextBox Text="{Binding ClientId, Mode=TwoWay}" Margin="0,0,0,10" />
+			
+			<TextBlock>Client Secret</TextBlock>
+			<TextBox Text="{Binding ClientSecret, Mode=TwoWay}" Margin="0,0,0,10" />
+			
+			<Button Command="{Binding Continue}">Continue</Button>
+		</StackPanel>
+	</ScrollViewer>
+</Page>

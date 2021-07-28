@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>d82f377b-1480-4e2b-88ac-f70d092ff481</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>SmartThingsToStart</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)Business\AesSecurityService.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Business\ISecurityService.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Constants.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Entities\AppToProxyToken.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Entities\CommutableDevice.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Entities\CommutableState.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Entities\Location.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Entities\ProxyNotificationChannel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Entities\PushNotificationChannelSubscription.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Extensions\CommutableDeviceExtensions.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Utils\AsyncLock.cs" />
+  </ItemGroup>
+</Project>
